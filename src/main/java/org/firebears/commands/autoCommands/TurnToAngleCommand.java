@@ -7,7 +7,7 @@
 
 package org.firebears.commands.autoCommands;
 
-import edu.wpi.first.wpilibj.controller.PIDController;
+import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.wpilibj2.command.PIDCommand;
 import com.kauailabs.navx.frc.AHRS.BoardAxis;
 

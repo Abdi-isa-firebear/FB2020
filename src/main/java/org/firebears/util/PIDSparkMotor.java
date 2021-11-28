@@ -1,6 +1,6 @@
 package org.firebears.util;
 
-import edu.wpi.first.wpilibj.SpeedController;
+import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 import com.revrobotics.CANEncoder;
 import com.revrobotics.CANError;
 import com.revrobotics.CANPIDController;
@@ -10,7 +10,7 @@ import com.revrobotics.ControlType;
 /**
  * Wrapper around {@code CANSparkMax} allowing us to do closed-loop driving.
  */
-public class PIDSparkMotor implements SpeedController {
+public class PIDSparkMotor implements MotorController {
 
 	// public static final double MAX_RPM = 5700.0;
 	// public static final double MAX_RPM = 6083.0;
@@ -135,11 +135,6 @@ public class PIDSparkMotor implements SpeedController {
 	@Override
 	public void stopMotor() {
 		motor.stopMotor();
-	}
-
-	@Override
-	public void pidWrite(double output) {
-
 	}
 
 	@Override

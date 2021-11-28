@@ -11,7 +11,6 @@ import com.kauailabs.navx.frc.AHRS.BoardAxis;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Preferences;
-import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -179,7 +178,7 @@ public class Chassis extends SubsystemBase {
 
     /** Get selected direction */
     private double getDirection() {
-        if (Math.abs(Robot.oi.xboxController.getTriggerAxis(Hand.kLeft)) < 0.5)
+        if (Math.abs(Robot.oi.xboxController.getLeftTriggerAxis()) < 0.5)
             return 1.0;
         else
             return -1.0;
@@ -187,7 +186,7 @@ public class Chassis extends SubsystemBase {
 
     /** Get selected pace */
     private double getPace() {
-        if (Math.abs(Robot.oi.xboxController.getTriggerAxis(Hand.kRight)) < 0.5)
+        if (Math.abs(Robot.oi.xboxController.getRightTriggerAxis()) < 0.5)
             return 1.0;
         else
             return 0.5;
